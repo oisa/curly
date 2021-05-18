@@ -18,9 +18,11 @@ const EthGasMonitor = () => {
         <BarBackground />
 
         <label className="window-toggle">
-          <div className="window-toggle-border">
-            <input type="checkbox"></input>
-            <span className="checkmark"></span>
+            <div className="window-toggle-border">
+              <input type="checkbox"></input>
+              <span className="checkmark"></span>
+            </div>
+          <div className="box">&nbsp;
           </div>
         </label>
 
