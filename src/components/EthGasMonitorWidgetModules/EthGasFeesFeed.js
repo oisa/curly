@@ -14,7 +14,7 @@ const EthGasFeesFeed = () => {
           Ξ 0.009
         </div>
         <div className="eth-gas-fees-feed-primary-currency-value">
-          USD $18.35
+          $18.35
         </div>
         <div className="eth-gas-fees-feed-transfer-duration">
           ~ 6 min, 15s
@@ -24,13 +24,13 @@ const EthGasFeesFeed = () => {
       <div className="eth-gas-fees-feed-average">
         <h3>Average</h3>
         <div className="eth-gas-fees-feed-gwei-value">
-          224
+          244
         </div>
         <div className="eth-gas-fees-feed-eth-value">
-          Ξ 0.009
+          Ξ 0.01
         </div>
         <div className="eth-gas-fees-feed-primary-currency-value">
-          USD $18.35
+          $19.99
         </div>
         <div className="eth-gas-fees-feed-transfer-duration">
           ~ 6 min, 15s
@@ -40,13 +40,13 @@ const EthGasFeesFeed = () => {
       <div className="eth-gas-fees-feed-high">
         <h3>High<IconFastHare /></h3>
         <div className="eth-gas-fees-feed-gwei-value">
-          224
+          272
         </div>
         <div className="eth-gas-fees-feed-eth-value">
-          Ξ 0.009
+          Ξ 0.015
         </div>
         <div className="eth-gas-fees-feed-primary-currency-value">
-          USD $18.35
+          $22.28
         </div>
         <div className="eth-gas-fees-feed-transfer-duration">
           ~ 6 min, 15s

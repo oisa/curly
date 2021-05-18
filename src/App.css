@@ -19,6 +19,16 @@
   --font-s: 12px;
   --font-xs: 10px;
 
+  /* ----- Padding standards ----- */
+
+  --padding-titles: 15px;
+
+  /* ----- Line weight standards ----- */
+
+  --line-weight-l: 4px;
+  --line-weight-m: 2px;
+  --line-weight-s: 1px;
+
 }
 
 html body {
@@ -98,12 +108,13 @@ p {
 }
 
 .currency-selection > select {
-  padding: 4px;
+  padding: 2px 4px 4px 4px;
   margin: 4px;
   height: 30px;
   outline: none;
   border: 1px rgb(var(--primary-window)) solid;
   border-radius: 6px;
+  font-family: 'Space Mono', monospace;
 }
 
 
@@ -171,6 +182,7 @@ p {
   justify-content: center;
   background-color: rgb(var(--secondary-window));
   height: 30px;
+  cursor: grab;
 }
 
 .bar-background {
@@ -243,9 +255,6 @@ input[type="checkbox" i] {
   height: 10px;
   border: solid black;
   border-width: 0 0 3px 0;
-  /* -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); */
 }
 
 .checkmark:after {
@@ -298,7 +307,6 @@ input[type="checkbox" i] {
 }
 
 
-
 /* ----- Eth Gas Fees Feed Widget ------ */
 
 /* Gas Fees Feed */
@@ -312,13 +320,18 @@ input[type="checkbox" i] {
 }
 
 .eth-gas-fees-feed-low, .eth-gas-fees-feed-average, .eth-gas-fees-feed-high {
-  padding: 15px;
+  padding: var(--padding-titles) 20px 20px 20px;
   text-align: center;
 }
 
-.eth-gas-fees-feed-gwei-value, .eth-gas-fees-feed-eth-value, .eth-gas-fees-feed-primary-currency-value, .eth-gas-fees-feed-transfer-duration {
-  font-size: var(--font-m);
-  line-height: 1.75;
+.eth-gas-fees-feed-gwei-value {
+  font-size: var(--font-l);
+  line-height: 2;
+}
+
+.eth-gas-fees-feed-eth-value, .eth-gas-fees-feed-primary-currency-value, .eth-gas-fees-feed-transfer-duration {
+  font-size: var(--font-s);
+  line-height: 2;
 }
 
 /* Top Guzzlers Module */
@@ -330,7 +343,7 @@ input[type="checkbox" i] {
 
 .eth-gas-fees-top-guzzlers-title {
   text-align: center;
-  padding: 15px;
+  padding: var(--padding-titles);
 }
 
 /* Exchange Prices Module */
@@ -345,23 +358,53 @@ input[type="checkbox" i] {
 }
 
 .eth-gas-fees-exchange-prices-title {
-  padding: 15px;
+  padding: var(--padding-titles);
 }
 
 /* Market Sentiment Module */
+
 .eth-gas-fees-market-sentiment-container {
+  min-height: 150px;
   width: 150px;
   color: rgb(var(--primary-window));
   background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .eth-gas-fees-market-sentiment-title {
-  padding: 15px;
+  padding: var(--padding-titles);
 }
 
 .eth-gas-fees-market-sentiment-value {
-  padding: 5px 10px 20px 10px;
+  position: absolute;
+  margin-top: calc(var(--padding-titles) * -1);
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  top: 50%;
+}
+
+/* Exchange Prices */
+
+.responsive-table {
+  margin: -10px 0 10px 0;
+  width: 90%;
+}
+
+th {
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+td {
+  text-align: center;
+  font-size: var(--font-s);
+  padding: 5px;
+}
+
+td:nth-of-type(1) {
+  text-align: left;
 }
