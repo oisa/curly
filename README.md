@@ -1,3 +1,3 @@
 # Curly
 
-## Coming soon 🎛👀
+### Coming soon 🎛 👀
