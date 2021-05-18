@@ -195,6 +195,12 @@ p {
   height: 2px;
   border: solid black;
   border-width: 0 0 1px 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .box {
@@ -418,3 +424,28 @@ td {
 td:nth-of-type(1) {
   text-align: left;
 }
+
+
+/* ----- System styles ----- */
+
+::-moz-selection {
+  color: rgb(var(--primary-system));
+  background: rgba(var(--secondary-system), 0.9);
+}
+
+::selection {
+  color: rgb(var(--primary-system));
+  background: rgba(var(--secondary-system), 0.9);
+}
+
+
+/* ------------------------- */
+/* ----- Media Queries ----- */
+/* ------------------------- */
+
+@media only screen
+  and (max-width: 800px) {
+    .module {
+      width: 100%;
+    }
+  }
