@@ -1,0 +1,9 @@
+const IconSlowTurtle = () => {
+  return (
+    <svg className="icon-slow-turtle" width="18" height="7" viewBox="0 0 18 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M1.125 3.375H2.25V2.25H3.375V1.125H4.5H5.625V0H6.75H7.875H9H10.125H11.25H12.375V1.125H13.5V2.25H14.625H15.75V1.125H16.875H18V2.25V3.375H16.875H15.75V4.5H14.625H13.5H12.375V5.625H13.5V6.75H12.375H11.25V5.625H10.125V4.5H9H7.875H6.75H5.625V5.625H6.75V6.75H5.625H4.5V5.625H3.375V4.5H2.25H1.125H0V3.375H1.125Z" />
+    </svg>
+  )
+}
+
+export default IconSlowTurtle;
