@@ -33,7 +33,7 @@ const EthGasFeesFeed = () => {
           $19.99
         </div>
         <div className="eth-gas-fees-feed-transfer-duration">
-          ~ 6 min, 15s
+          ~ 1 min, 20s
         </div>
       </div>
 
@@ -49,7 +49,7 @@ const EthGasFeesFeed = () => {
           $22.28
         </div>
         <div className="eth-gas-fees-feed-transfer-duration">
-          ~ 6 min, 15s
+          ~ 0 min, 20s
         </div>
       </div>
 

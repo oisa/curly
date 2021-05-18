@@ -197,10 +197,10 @@ p {
   border-width: 0 0 1px 0;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
-   -khtml-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .box {
@@ -327,7 +327,7 @@ input[type="checkbox" i] {
 
 /* Gas Fees Feed */
 .eth-gas-fees-feed-container {
-  width: 450px;
+  width: 420px;
   color: rgb(var(--primary-window));
   background-color: rgb(var(--secondary-window));
   display: flex;
@@ -347,20 +347,24 @@ input[type="checkbox" i] {
 
 .eth-gas-fees-feed-eth-value, .eth-gas-fees-feed-primary-currency-value, .eth-gas-fees-feed-transfer-duration {
   font-size: var(--font-s);
-  line-height: 2;
+  padding: 5px;
 }
 
 /* Top Guzzlers Module */
 .eth-gas-fees-top-guzzlers-container {
-  width: 200px;
+  width: 230px;
   color: rgb(var(--primary-window));
   background-color: rgb(var(--secondary-window));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .eth-gas-fees-top-guzzlers-title {
   text-align: center;
   padding: var(--padding-titles);
 }
+
 
 /* Exchange Prices Module */
 
@@ -408,6 +412,7 @@ input[type="checkbox" i] {
 .responsive-table {
   margin: -10px 0 10px 0;
   width: 90%;
+  text-align: center;
 }
 
 th {
@@ -447,5 +452,9 @@ td:nth-of-type(1) {
   and (max-width: 800px) {
     .module {
       width: 100%;
+    }
+
+    .eth-gas-fees-top-guzzlers-container > table {
+      width: 70%;
     }
   }
