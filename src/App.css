@@ -22,6 +22,7 @@
   /* ----- Padding standards ----- */
 
   --padding-titles: 15px;
+  --padding-general: 15px;
 
   /* ----- Line weight standards ----- */
 
@@ -175,6 +176,21 @@ p {
   cursor: pointer;
   fill: rgb(var(--secondary-window));
   stroke: rgb(var(--primary-window));
+  position: relative;
+  top: 2px;
+}
+
+.icon-button-add {
+  cursor: pointer;
+  fill: rgb(var(--secondary-window));
+  stroke: rgb(var(--primary-window));
+  position: relative;
+  top: 2px;
+}
+
+.icon-button-pointing-hand {
+  cursor: pointer;
+  fill: rgb(var(--primary-window));
   position: relative;
   top: 2px;
 }
@@ -340,6 +356,11 @@ input[type="checkbox" i] {
   justify-content: center;
 }
 
+.generic-title {
+  text-align: center;
+  padding: var(--padding-titles);
+}
+
 
 /* ----- Table Styling ----- */
 
@@ -377,6 +398,12 @@ td:nth-of-type(1) {
 
 .wishlist-table > tr > td:nth-of-type(2) {
   text-align: left;
+}
+
+.crypto-by-market-cap-table {
+  margin: -10px 0 10px 0;
+  width: 95%;
+  text-align: center;
 }
 
 
@@ -422,7 +449,6 @@ td:nth-of-type(1) {
   padding: var(--padding-titles);
 }
 
-
 /* Exchange Prices Module */
 .eth-gas-fees-exchange-prices-container {
   width: 500px;
@@ -431,10 +457,6 @@ td:nth-of-type(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.eth-gas-fees-exchange-prices-title {
-  padding: var(--padding-titles);
 }
 
 /* Market Sentiment Module */
@@ -474,6 +496,55 @@ td:nth-of-type(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+/* Module Crypto By Market Cap */
+.crypto-by-market-cap-container {
+  width: 450px;
+  min-height: 200px;
+  color: rgb(var(--primary-window));
+  background-color: rgb(var(--secondary-window));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Module Search */
+.search-container {
+  width: 200px;
+  min-height: 200px;
+  color: rgb(var(--primary-window));
+  background-color: rgb(var(--secondary-window));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-element-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-general) var(--padding-general) var(--padding-general);
+  justify-content: center;
+}
+
+input[type="field" i] {
+  padding: 5px;
+  font-family: 'Space Mono', monospace;
+  outline: 1px solid rgb(var(--primary-window));
+  width: 70%;
+  border: none;
+}
+
+input[type="field" i]::placeholder {
+  padding: 3px;
+}
+
+.search-element-container > button {
+  background-color: rgb(var(--secondary-window));
+  border: none;
+  outline: 1px solid rgb(var(--primary-window));
+  cursor: pointer;
+
 }
 
 

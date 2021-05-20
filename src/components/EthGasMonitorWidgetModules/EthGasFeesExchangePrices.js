@@ -1,7 +1,7 @@
 const EthGasFeesExchangePrices = () => {
   return (
     <div className="eth-gas-fees-exchange-prices-container module">
-      <h3 className="eth-gas-fees-exchange-prices-title">
+      <h3 className="generic-title">
         Exchange Prices
       </h3>
 

@@ -1,7 +1,8 @@
 // Components
 import ModuleWatchList from './WidgetWatchListModules/ModuleWatchList';
-import EthGasFeesExchangePrices from './EthGasMonitorWidgetModules/EthGasFeesExchangePrices';
-import EthGasFeesMarketSentiment from './EthGasMonitorWidgetModules/EthGasFeesMarketSentiment';
+import ModuleCryptoByMarketCap from './WidgetWatchListModules/ModuleCryptoByMarketCap';
+import ModuleSearch from './WidgetWatchListModules/ModuleSearch';
+
 
 // Icons and Graphics
 import BarBackground from '../assets/BarBackground';
@@ -36,8 +37,8 @@ const WidgetWatchList = () => {
           </div>
 
           <div className="window-row">
-            <EthGasFeesExchangePrices />
-            <EthGasFeesMarketSentiment />
+            <ModuleCryptoByMarketCap />
+            <ModuleSearch />
           </div>
         </div>
 

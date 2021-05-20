@@ -3,7 +3,7 @@ import IconHappy from '../../assets/IconHappy';
 const EthGasFeesMarketSentiment = () => {
   return (
     <div className="eth-gas-fees-market-sentiment-container module">
-      <h3 className="eth-gas-fees-market-sentiment-title">
+      <h3 className="generic-title">
         Sentiment
       </h3>
 

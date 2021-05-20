@@ -1,7 +1,7 @@
 const EthGasFeesTopGuzzlers = () => {
   return (
     <div className="eth-gas-fees-top-guzzlers-container module">
-      <h3 className="eth-gas-fees-top-guzzlers-title">
+      <h3 className="generic-title">
         Top Guzzlers
       </h3>
 
@@ -13,7 +13,7 @@ const EthGasFeesTopGuzzlers = () => {
         </tr>
 
         <tr>
-          <td className="eth-gas-fees-top-guzzlers-name" >Uniswap V2</td>
+          <td>Uniswap V2</td>
           <td>$3,897,193.02</td>
         </tr>
 

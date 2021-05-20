@@ -1,5 +1,6 @@
 import IconGrab from '../../assets/IconGrab';
 import IconButtonRemove from '../../assets/IconButtonRemove';
+import IconButtonAdd from '../../assets/IconButtonAdd';
 
 const ModuleWatchList = () => {
   return (
@@ -15,6 +16,16 @@ const ModuleWatchList = () => {
           <th>Price</th>
           <th>Market Cap</th>
           <th></th>
+        </tr>
+
+        <tr>
+          <td><IconGrab /></td>
+          <td>Bitcoin</td>
+          <td>BTC</td>
+          <td>-30%</td>
+          <td>$38,543</td>
+          <td>$709,312,325,850</td>
+          <td><IconButtonRemove /></td>
         </tr>
 
         <tr>
@@ -39,11 +50,11 @@ const ModuleWatchList = () => {
 
         <tr>
           <td><IconGrab /></td>
-          <td>Kusama</td>
-          <td>KSM</td>
+          <td>Cardano</td>
+          <td>ADA</td>
           <td>+19%</td>
-          <td>$414.03</td>
-          <td>$3,421,583,952</td>
+          <td>$1.83</td>
+          <td>$60,221,583,952</td>
           <td><IconButtonRemove /></td>
         </tr>
 
@@ -51,9 +62,9 @@ const ModuleWatchList = () => {
           <td><IconGrab /></td>
           <td>Bridge Mutal</td>
           <td>BMI</td>
-          <td>-3%</td>
-          <td>$1.71</td>
-          <td>$89,325,850</td>
+          <td>+2%</td>
+          <td>$1.20</td>
+          <td>$60,583,952</td>
           <td><IconButtonRemove /></td>
         </tr>
 
