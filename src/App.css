@@ -108,17 +108,19 @@ p {
 }
 
 .currency-selection > select {
-  padding: 2px 4px 4px 4px;
+  padding: 3px 6px 4px 6px;
   margin: 4px;
   height: 30px;
   outline: none;
   border: 1px rgb(var(--primary-window)) solid;
   border-radius: 6px;
   font-family: 'Space Mono', monospace;
+  -webkit-appearance: none;
+  cursor: pointer;
 }
 
 
-/* ----- SVG Fills ----- */
+/* ----- SVG icons ----- */
 
 .icon-header {
   fill: rgb(var(--primary-system));
@@ -162,14 +164,37 @@ p {
   fill: rgb(var(--primary-window));
 }
 
+.icon-grab {
+  cursor: grab;
+  fill: rgb(var(--primary-window));
+  position: relative;
+  top: 2px;
+}
+
+.icon-button-remove {
+  cursor: pointer;
+  fill: rgb(var(--secondary-window));
+  stroke: rgb(var(--primary-window));
+  position: relative;
+  top: 2px;
+}
+
 
 /* ----- Window Styles ----- */
+
+.widgets {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
 
 .window {
   display: flex;
   flex-direction: column;
   max-width: 800px;
   margin: 20px;
+  height: 100%;
   border: 2px solid rgb(var(--primary-window));
   /* box-shadow: 3px 3px 0px rgb(var(--primary-window)); */
 }
@@ -316,10 +341,42 @@ input[type="checkbox" i] {
 }
 
 
-/* ----- Module General Styling ----- */
+/* ----- Table Styling ----- */
 
-.module {
-  margin: 7.5px;
+th {
+  font-size: var(--font-s);
+  text-align: center;
+  padding-bottom: 8px;
+}
+
+td {
+  text-align: center;
+  font-size: var(--font-s);
+  padding: 5px;
+}
+
+td:nth-of-type(1) {
+  text-align: left;
+}
+
+.eth-gas-fees-table {
+  margin: -10px 0 10px 0;
+  width: 90%;
+  text-align: center;
+}
+
+.wishlist-table {
+  margin: 10px 0 10px 0;
+  width: 95%;
+  text-align: center;
+}
+
+.wishlist-table > tr > td:nth-of-type(1) {
+  width: 5%;
+}
+
+.wishlist-table > tr > td:nth-of-type(2) {
+  text-align: left;
 }
 
 
@@ -367,7 +424,6 @@ input[type="checkbox" i] {
 
 
 /* Exchange Prices Module */
-
 .eth-gas-fees-exchange-prices-container {
   width: 500px;
   color: rgb(var(--primary-window));
@@ -382,7 +438,6 @@ input[type="checkbox" i] {
 }
 
 /* Market Sentiment Module */
-
 .eth-gas-fees-market-sentiment-container {
   min-height: 150px;
   width: 150px;
@@ -407,27 +462,30 @@ input[type="checkbox" i] {
   top: 50%;
 }
 
-/* Exchange Prices */
 
-.responsive-table {
-  margin: -10px 0 10px 0;
-  width: 90%;
-  text-align: center;
+/* ----- Watchlist Widget ----- */
+
+/* Watch List Module */
+.watch-list-container {
+  width: 650px;
+  min-height: 200px;
+  color: rgb(var(--primary-window));
+  background-color: rgb(var(--secondary-window));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-th {
-  text-align: center;
-  padding-bottom: 8px;
+
+/* ----- Module General Styling ----- */
+
+.module {
+  margin: 7.5px;
 }
 
-td {
-  text-align: center;
-  font-size: var(--font-s);
-  padding: 5px;
-}
-
-td:nth-of-type(1) {
-  text-align: left;
+.module-single {
+  margin: 7.5px;
+  width: 100%;
 }
 
 
@@ -450,6 +508,7 @@ td:nth-of-type(1) {
 
 @media only screen
   and (max-width: 800px) {
+
     .module {
       width: 100%;
     }

@@ -5,7 +5,7 @@ const EthGasFeesExchangePrices = () => {
         Exchange Prices
       </h3>
 
-      <table className="responsive-table">
+      <table className="eth-gas-fees-table">
 
         <tr>
           <th></th>

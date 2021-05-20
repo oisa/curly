@@ -9,7 +9,7 @@ import IconArrowRefresh from '../assets/IconArrowRefresh';
 import IconWindowBarBackground from '../assets/IconWindowBarBackground';
 import BarBackground from '../assets/BarBackground';
 
-const EthGasMonitor = () => {
+const WidgetEthGasMonitor = () => {
   return(
     <div className="window">
 
@@ -50,4 +50,4 @@ const EthGasMonitor = () => {
   );
 }
 
-export default EthGasMonitor;
+export default WidgetEthGasMonitor;

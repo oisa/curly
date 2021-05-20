@@ -1,6 +1,9 @@
 // Components
 import Header from './Header';
-import EthGasMonitor from './EthGasMonitor.js';
+
+// Modules
+import WidgetEthGasMonitor from './WidgetEthGasMonitor';
+import WidgetWatchList from './WidgetWatchList';
 
 import logo from '../logo.svg';
 import '../App.css';
@@ -9,7 +12,10 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <EthGasMonitor />
+      <div className="widgets">
+        <WidgetEthGasMonitor />
+        <WidgetWatchList />
+      </div>
     </div>
   );
 }
