@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 // Components
 import EthGasFeesFeed from './EthGasMonitorWidgetModules/EthGasFeesFeed.js';
 import EthGasFeesTopGuzzlers from './EthGasMonitorWidgetModules/EthGasFeesTopGuzzlers.js';
@@ -10,6 +12,15 @@ import IconWindowBarBackground from '../assets/IconWindowBarBackground';
 import BarBackground from '../assets/BarBackground';
 
 const WidgetEthGasMonitor = () => {
+
+  let currentWindowToggleEthGasMonitor = false;
+
+  const [windowToggleEthGasMonitor, setWindowToggleEthGasMonitor] = useState(currentWindowToggleEthGasMonitor);
+
+  const handleChange = (checked) => {
+    setWindowToggleEthGasMonitor(checked.target.checked);
+  }
+
   return(
     <div className="window">
 
@@ -19,7 +30,7 @@ const WidgetEthGasMonitor = () => {
 
         <label className="window-toggle">
             <div className="window-toggle-border">
-              <input type="checkbox"></input>
+              <input type="checkbox" onChange={ handleChange }></input>
               <span className="checkmark"></span>
             </div>
           <div className="box">&nbsp;
@@ -30,7 +41,7 @@ const WidgetEthGasMonitor = () => {
         <a href="#"><IconArrowRefresh /></a>
       </div>
 
-      <div className="window-contents">
+      <div className={windowToggleEthGasMonitor === false ? "window-contents" : "window-contents widget-hide"}>
 
         <div className="window-inner-lining">
           <div className="window-row">

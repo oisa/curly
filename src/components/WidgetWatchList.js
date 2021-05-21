@@ -1,14 +1,24 @@
+import React,  { useState } from 'react';
+
 // Components
 import ModuleWatchList from './WidgetWatchListModules/ModuleWatchList';
 import ModuleCryptoByMarketCap from './WidgetWatchListModules/ModuleCryptoByMarketCap';
 import ModuleSearch from './WidgetWatchListModules/ModuleSearch';
-
 
 // Icons and Graphics
 import BarBackground from '../assets/BarBackground';
 import IconArrowRefresh from '../assets/IconArrowRefresh';
 
 const WidgetWatchList = () => {
+
+  let currentWindowToggleWatchList = false;
+
+  const [windowToggleWatchList, setWindowToggleWatchList] = useState(currentWindowToggleWatchList);
+
+  const handleChange = (checked) => {
+    setWindowToggleWatchList(checked.target.checked);
+  }
+
   return (
     <div className="window">
 
@@ -18,7 +28,7 @@ const WidgetWatchList = () => {
 
         <label className="window-toggle">
             <div className="window-toggle-border">
-              <input type="checkbox"></input>
+              <input type="checkbox" onChange={ handleChange } ></input>
               <span className="checkmark"></span>
             </div>
           <div className="box">&nbsp;
@@ -29,7 +39,7 @@ const WidgetWatchList = () => {
         <a href="#"><IconArrowRefresh /></a>
       </div>
 
-      <div className="window-contents">
+      <div className={windowToggleWatchList === false ? "window-contents" : "window-contents widget-hide"}>
 
         <div className="window-inner-lining">
           <div className="window-row">
