@@ -6,7 +6,7 @@ const ModuleWatchList = () => {
   return (
     <div className="watch-list-container module-single" >
 
-      <table className="wishlist-table">
+      <table className="watch-list-table">
 
         <tr>
           <th></th>

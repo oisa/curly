@@ -13,7 +13,7 @@
   /* ----- Font Sizes ----- */
 
   --font-xxl: 64px;
-  --font-xl: 36px;
+  --font-xl: 42px;
   --font-l: 18px;
   --font-m: 14px;
   --font-s: 12px;
@@ -81,7 +81,7 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin: 20px 50px 0 50px;
 }
 
 .logo {
@@ -93,12 +93,14 @@ p {
 .header-time {
   width: 100%;
   text-align: center;
+  line-height: 2;
 }
 
 .currency-section {
   display: flex;
   flex-direction: row;
   margin: 5px 0 0 0;
+  text-align: center;
 }
 
 .currency-selection {
@@ -364,6 +366,10 @@ input[type="checkbox" i] {
 
 /* ----- Table Styling ----- */
 
+/* table {
+  table-layout: fixed;
+} */
+
 th {
   font-size: var(--font-s);
   text-align: center;
@@ -374,6 +380,8 @@ td {
   text-align: center;
   font-size: var(--font-s);
   padding: 5px;
+  /* overflow: hidden;
+  white-space: nowrap; */
 }
 
 td:nth-of-type(1) {
@@ -386,19 +394,28 @@ td:nth-of-type(1) {
   text-align: center;
 }
 
-.wishlist-table {
+.watch-list-table {
   margin: 10px 0 10px 0;
   width: 95%;
   text-align: center;
 }
 
-.wishlist-table > tr > td:nth-of-type(1) {
+.watch-list-table > tr > td {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.watch-list-table > tr > td:nth-of-type(1) {
   width: 5%;
 }
 
-.wishlist-table > tr > td:nth-of-type(2) {
+.watch-list-table > tr > td:nth-of-type(2) {
   text-align: left;
 }
+
+/* .watch-list-table > tr > td:nth-of-type(6) {
+  width: 20px;
+} */
 
 .crypto-by-market-cap-table {
   margin: -10px 0 10px 0;
@@ -579,6 +596,23 @@ input[type="field" i]::placeholder {
 
 @media only screen
   and (max-width: 800px) {
+
+    h1 {
+      font-size: var(--font-xl);
+    }
+
+    .icon-header {
+      height: 25px;
+      padding: 0 3px 10px 3px;
+    }
+
+    .currency-section {
+      margin: 0;
+    }
+
+    .currency-selection {
+      margin: 0 10px;
+    }
 
     .module {
       width: 100%;
