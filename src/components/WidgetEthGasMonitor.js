@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 // Components
-import EthGasFeesFeed from './EthGasMonitorWidgetModules/EthGasFeesFeed.js';
-import EthGasFeesTopGuzzlers from './EthGasMonitorWidgetModules/EthGasFeesTopGuzzlers.js';
-import EthGasFeesExchangePrices from './EthGasMonitorWidgetModules/EthGasFeesExchangePrices';
-import EthGasFeesMarketSentiment from './EthGasMonitorWidgetModules/EthGasFeesMarketSentiment';
+import EthGasFeesFeed from './WidgetEthGasMonitorModules/EthGasFeesFeed.js';
+import EthGasFeesTopGuzzlers from './WidgetEthGasMonitorModules/EthGasFeesTopGuzzlers.js';
+import EthGasFeesExchangePrices from './WidgetEthGasMonitorModules/EthGasFeesExchangePrices.js';
+import EthGasFeesMarketSentiment from './WidgetEthGasMonitorModules/EthGasFeesMarketSentiment.js';
 
 // Icons & Graphics
 import IconArrowRefresh from '../assets/IconArrowRefresh';

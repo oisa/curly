@@ -14,7 +14,7 @@ const ModuleCryptoByMarketCap = () => {
 
         <tr>
           <th></th>
-          <th>Ticker</th>
+          <th></th>
           <th>Price</th>
           <th>Market Cap</th>
           <th></th>

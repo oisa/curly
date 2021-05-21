@@ -322,7 +322,15 @@ input[type="checkbox" i] {
   display: none;
 }
 
-.window-bar > a {
+.window-title {
+  position: absolute;
+  color: rgb(var(--primary-window));
+  z-index: 100;
+  padding: 1px 15px;
+  background-color: rgb(var(--secondary-window));
+}
+
+.window-bar > a:nth-of-type(1) {
   position: absolute;
   right: 13px;
   z-index: 100;
@@ -330,12 +338,25 @@ input[type="checkbox" i] {
   background-color: rgb(var(--secondary-window));
 }
 
-.window-title {
+.window-bar > a:nth-of-type(2) {
   position: absolute;
-  color: rgb(var(--primary-window));
+  right: 45px;
   z-index: 100;
-  padding: 1px 15px;
+  padding: 0 4px 0 5px;
   background-color: rgb(var(--secondary-window));
+}
+
+.icon-button-pointing-hand-window-bar {
+  cursor: pointer;
+  fill: rgb(var(--primary-window));
+  padding: 1px 2px;
+  position: relative;
+  right: 20px;
+}
+
+.icon-button-pointing-hand-window-bar > svg {
+  margin-bottom: 2px;
+  width: 18px;
 }
 
 .window-contents {
@@ -396,8 +417,10 @@ td:nth-of-type(1) {
 
 .watch-list-table {
   margin: 10px 0 10px 0;
-  width: 95%;
+  width: 98%;
   text-align: center;
+  overflow-y: scroll;
+  max-height: 162px;
 }
 
 .watch-list-table > tr > td {
@@ -413,14 +436,30 @@ td:nth-of-type(1) {
   text-align: left;
 }
 
-/* .watch-list-table > tr > td:nth-of-type(6) {
-  width: 20px;
-} */
-
 .crypto-by-market-cap-table {
   margin: -10px 0 10px 0;
   width: 95%;
   text-align: center;
+}
+
+.portfolio-table {
+  margin: 10px 0 10px 0;
+  width: 98%;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.portfolio-table > tr > td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.portfolio-table > tr > td:nth-of-type(2) {
+  text-align: left;
+}
+
+.portfolio-table > tr > td:nth-of-type(4), .portfolio-table > tr > td:nth-of-type(5) {
+  border: var(--line-weight-s) solid rgb(var(--primary-window));
 }
 
 
@@ -504,15 +543,16 @@ td:nth-of-type(1) {
 
 /* ----- Watchlist Widget ----- */
 
-/* Watch List Module */
+/* Module Watch List */
 .watch-list-container {
   width: 650px;
-  min-height: 200px;
+  min-height: 100px;
   color: rgb(var(--primary-window));
   background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
 }
 
 /* Module Crypto By Market Cap */
@@ -561,8 +601,23 @@ input[type="field" i]::placeholder {
   border: none;
   outline: 1px solid rgb(var(--primary-window));
   cursor: pointer;
-
+  margin-left: -1px;
 }
+
+
+/* ----- Widget Portfolio ----- */
+
+/* Module Portfolio */
+.portfolio-container {
+  min-width: 665px;
+  min-height: 200px;
+  color: rgb(var(--primary-window));
+  background-color: rgb(var(--secondary-window));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 
 
 /* ----- Module General Styling ----- */
@@ -626,4 +681,24 @@ input[type="field" i]::placeholder {
     .eth-gas-fees-top-guzzlers-container > table {
       width: 70%;
     }
+
+    .watch-list-table > tr > th:nth-of-type(2), .watch-list-table > tr > td:nth-of-type(2)  {
+      display: none;
+    }
+
+    .watch-list-table > tr > td:nth-of-type(6) {
+      max-width: 10px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .portfolio-container {
+      min-width: 100px;
+    }
+
+    .portfolio-table > tr > th:nth-of-type(2) ,.portfolio-table > tr > td:nth-of-type(2) {
+      display: none;
+    }
+
   }
