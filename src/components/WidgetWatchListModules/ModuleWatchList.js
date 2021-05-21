@@ -70,21 +70,21 @@ const ModuleWatchList = () => {
 
         <tr>
           <td><IconGrab /></td>
-          <td>Bridge Mutal</td>
-          <td>BMI</td>
-          <td>+2%</td>
-          <td>$1.20</td>
-          <td>$60,583,952</td>
+          <td>Injective Protocol</td>
+          <td>INJ</td>
+          <td>+12%</td>
+          <td>$12.36</td>
+          <td>$238,583,952</td>
           <td><IconButtonRemove /></td>
         </tr>
 
         <tr>
           <td><IconGrab /></td>
-          <td>Bridge Mutal</td>
-          <td>BMI</td>
-          <td>+2%</td>
-          <td>$1.20</td>
-          <td>$60,583,952</td>
+          <td>Ramp Defi</td>
+          <td>RAMP</td>
+          <td>-20%</td>
+          <td>$0.29</td>
+          <td>$70,583,952</td>
           <td><IconButtonRemove /></td>
         </tr>
 
