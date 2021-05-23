@@ -419,7 +419,7 @@ td:nth-of-type(1) {
   margin: 10px 0 10px 0;
   width: 98%;
   text-align: center;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   max-height: 162px;
 }
 
@@ -678,6 +678,10 @@ input[type="field" i]::placeholder {
       width: 100%;
     }
 
+    .module-single {
+      width: 100%;
+    }
+
     .eth-gas-fees-top-guzzlers-container > table {
       width: 70%;
     }
@@ -693,11 +697,31 @@ input[type="field" i]::placeholder {
       white-space: nowrap;
     }
 
+    .crypto-by-market-cap-table > tr > th:nth-of-type(4) ,.crypto-by-market-cap-table > tr > td:nth-of-type(4) {
+      display: none;
+    }
+
     .portfolio-container {
       min-width: 100px;
     }
 
+    .portfolio-table {
+      max-width: 100%;
+    }
+
     .portfolio-table > tr > th:nth-of-type(2) ,.portfolio-table > tr > td:nth-of-type(2) {
+      display: none;
+    }
+
+    .portfolio-table > tr > th:nth-of-type(6) ,.portfolio-table > tr > td:nth-of-type(6) {
+      /* overflow: auto;
+      text-overflow: ellipsis; */
+      display: none;
+    }
+
+    .portfolio-table > tr > th:nth-of-type(5) ,.portfolio-table > tr > td:nth-of-type(5) {
+      /* overflow: auto;
+      text-overflow: ellipsis; */
       display: none;
     }
 
