@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 // Components
 import ModulePortfolio from './WidgetPortfolioModules/ModulePortfolio';
+import ModuleWallets from './WidgetPortfolioModules/ModuleWallets';
+import ModulePortfolioStats from './WidgetPortfolioModules/ModulePortfolioStats';
 
 // Icons and Graphics
 import BarBackground from '../assets/BarBackground';
@@ -49,7 +51,8 @@ const WidgetPortfolio = () => {
           </div>
 
           <div className="window-row">
-
+            <ModuleWallets />
+            <ModulePortfolioStats />
           </div>
         </div>
 

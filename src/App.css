@@ -45,6 +45,7 @@ html body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 30px;
 }
 
 header {
@@ -68,6 +69,11 @@ h2 {
 h3 {
   margin: 0 0 4px 0;
   font-size: var(--font-l);
+}
+
+h4 {
+  margin: 0px 0 4px 0;
+  font-size: var(--font-s);
 }
 
 p {
@@ -120,6 +126,19 @@ p {
   font-family: 'Space Mono', monospace;
   -webkit-appearance: none;
   cursor: pointer;
+  background-color: rgb(var(--primary-window));
+}
+
+input[type="field" i] {
+  padding: 5px 5px 5px 7px;
+  font-family: 'Space Mono', monospace;
+  outline: 1px solid rgb(var(--primary-window));
+  width: 70%;
+  border: none;
+}
+
+input[type="field" i]::placeholder {
+  padding: 2px;
 }
 
 
@@ -195,6 +214,18 @@ p {
   fill: rgb(var(--primary-window));
   position: relative;
   top: 2px;
+}
+
+.icon-bomb {
+  cursor: pointer;
+  fill: rgb(var(--primary-window));
+  width: 20px;
+}
+
+.icon-tick {
+  cursor: pointer;
+  fill: rgb(var(--primary-window));
+  width: 15px;
 }
 
 
@@ -462,14 +493,24 @@ td:nth-of-type(1) {
   border: var(--line-weight-s) solid rgb(var(--primary-window));
 }
 
+.wallets-imported-table {
+  margin: -10px 0 10px 0;
+  width: 100%;
+  text-align: center;
+}
+
+.wallets-imported-table > tr > td:nth-of-type(1) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 
 /* ----- Eth Gas Fees Feed Widget ------ */
 
 /* Gas Fees Feed */
 .eth-gas-fees-feed-container {
   width: 420px;
-  color: rgb(var(--primary-window));
-  background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -493,8 +534,6 @@ td:nth-of-type(1) {
 /* Top Guzzlers Module */
 .eth-gas-fees-top-guzzlers-container {
   width: 230px;
-  color: rgb(var(--primary-window));
-  background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -508,8 +547,6 @@ td:nth-of-type(1) {
 /* Exchange Prices Module */
 .eth-gas-fees-exchange-prices-container {
   width: 500px;
-  color: rgb(var(--primary-window));
-  background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -519,8 +556,6 @@ td:nth-of-type(1) {
 .eth-gas-fees-market-sentiment-container {
   min-height: 150px;
   width: 150px;
-  color: rgb(var(--primary-window));
-  background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -547,8 +582,6 @@ td:nth-of-type(1) {
 .watch-list-container {
   width: 650px;
   min-height: 100px;
-  color: rgb(var(--primary-window));
-  background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -559,8 +592,6 @@ td:nth-of-type(1) {
 .crypto-by-market-cap-container {
   width: 450px;
   min-height: 200px;
-  color: rgb(var(--primary-window));
-  background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -570,8 +601,6 @@ td:nth-of-type(1) {
 .search-container {
   width: 200px;
   min-height: 200px;
-  color: rgb(var(--primary-window));
-  background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -582,18 +611,6 @@ td:nth-of-type(1) {
   flex-direction: row;
   padding: 0 var(--padding-general) var(--padding-general) var(--padding-general);
   justify-content: center;
-}
-
-input[type="field" i] {
-  padding: 5px;
-  font-family: 'Space Mono', monospace;
-  outline: 1px solid rgb(var(--primary-window));
-  width: 70%;
-  border: none;
-}
-
-input[type="field" i]::placeholder {
-  padding: 3px;
 }
 
 .search-element-container > button {
@@ -609,26 +626,74 @@ input[type="field" i]::placeholder {
 
 /* Module Portfolio */
 .portfolio-container {
-  min-width: 665px;
+  /* min-width: 665px; */
   min-height: 200px;
-  color: rgb(var(--primary-window));
-  background-color: rgb(var(--secondary-window));
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+.wallets-container {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 180px;
+}
+
+.wallet-search-container {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 var(--padding-general) var(--padding-general) var(--padding-general);
+  justify-content: center;
+}
+
+.wallet-search-container > input {
+  width: 100%;
+}
+
+.wallet-search-container > button {
+  background-color: rgb(var(--secondary-window));
+  border: none;
+  outline: 1px solid rgb(var(--primary-window));
+  cursor: pointer;
+  margin-left: -1px;
+}
+
+.wallets-imported-container {
+  margin: 0 0 20px 0;
+  width: 95%;
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
+.portfolio-stats-container {
+  width: 200px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.portfolio-stats-total {
+  padding: 10px;
+}
 
 
 /* ----- Module General Styling ----- */
 
 .module {
   margin: 7.5px;
+  color: rgb(var(--primary-window));
+  background-color: rgb(var(--secondary-window));
 }
 
 .module-single {
   margin: 7.5px;
   width: 100%;
+  color: rgb(var(--primary-window));
+  background-color: rgb(var(--secondary-window));
 }
 
 .widget-hide {
