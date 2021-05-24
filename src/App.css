@@ -126,7 +126,7 @@ p {
   font-family: 'Space Mono', monospace;
   -webkit-appearance: none;
   cursor: pointer;
-  background-color: rgb(var(--primary-window));
+  background-color: rgb(var(--secondary-window));
 }
 
 input[type="field" i] {
