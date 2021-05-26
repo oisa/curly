@@ -478,6 +478,7 @@ td:nth-of-type(1) {
   width: 98%;
   text-align: center;
   border-collapse: collapse;
+  max-height: 200px;
 }
 
 .portfolio-table > tr > td {
@@ -491,6 +492,11 @@ td:nth-of-type(1) {
 
 .portfolio-table > tr > td:nth-of-type(4), .portfolio-table > tr > td:nth-of-type(5) {
   border: var(--line-weight-s) solid rgb(var(--primary-window));
+}
+
+.portfolio-table > tr:nth-last-of-type(1) > td:nth-of-type(4), .portfolio-table > tr:nth-last-of-type(1) > td:nth-of-type(5) {
+  padding: 10px 0 10px 0;
+  border: none;
 }
 
 .wallets-imported-table {
@@ -631,6 +637,7 @@ td:nth-of-type(1) {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
 }
 
 .wallets-container {

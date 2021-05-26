@@ -80,6 +80,54 @@ const ModulePortfolio = () => {
           <td><IconButtonRemove /></td>
         </tr>
 
+        <tr>
+          <td><IconGrab /></td>
+          <td>Bridge Mutal</td>
+          <td>BMI</td>
+          <td>22,721</td>
+          <td>$1.60</td>
+          <td>$20,321</td>
+          <td>$0.99</td>
+          <td>$20,224</td>
+          <td><IconButtonRemove /></td>
+        </tr>
+
+        <tr>
+          <td><IconGrab /></td>
+          <td>Bridge Mutal</td>
+          <td>BMI</td>
+          <td>22,721</td>
+          <td>$1.60</td>
+          <td>$20,321</td>
+          <td>$0.99</td>
+          <td>$20,224</td>
+          <td><IconButtonRemove /></td>
+        </tr>
+
+        <tr>
+          <td><IconGrab /></td>
+          <td>Bridge Mutal</td>
+          <td>BMI</td>
+          <td>22,721</td>
+          <td>$1.60</td>
+          <td>$20,321</td>
+          <td>$0.99</td>
+          <td>$20,224</td>
+          <td><IconButtonRemove /></td>
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td><IconButtonAdd /></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+
       </table>
 
     </div>
