@@ -6,19 +6,32 @@ import IconFastHare from '../../assets/IconFastHare';
 
 const EthGasFeesFeed = () => {
 
+  // Gas fees
   const [lowEthGasGwei, setLowEthGasGwei] = useState(0);
-  const [stdEthGasGwei, setStdEthGasGwei] = useState(0);
+  const [avgEthGasGwei, setAvgEthGasGwei] = useState(0);
   const [highEthGasGwei, setHighEthGasGwei] = useState(0);
 
+  // Gas fees speeds
+  const [lowEthGasSpeed, setLowEthGasSpeed] = useState(0);
+  const [avgEthGasSpeed, setAvgEthGasSpeed] = useState(0);
+  const [highEthGasSpeed, setHighEthGasSpeed] = useState(0);
+
   useEffect(() => {
-      axios('https://www.gasnow.org/api/v3/gas/price?').then((response) => {
-        console.log(response);
-        setLowEthGasGwei(response.data.data.slow / 1000000000);
-        setStdEthGasGwei(response.data.data.standard / 1000000000);
-        setHighEthGasGwei(response.data.data.fast / 1000000000);
-      });
-    }
-  );
+    fetchData();
+  }, []);
+
+  const fetchData = () => {
+    axios('https://ethgasstation.info/api/ethgasAPI.json?').then((response) => {
+      console.log(response);
+      setLowEthGasGwei(response.data.safeLow / 10);
+      setAvgEthGasGwei(response.data.average / 10);
+      setHighEthGasGwei(response.data.fast / 10);
+
+      setLowEthGasSpeed(response.data.safeLowWait);
+      setAvgEthGasSpeed(response.data.avgWait);
+      setHighEthGasSpeed(response.data.fastWait);
+    });
+  }
 
     return (
       <div className="eth-gas-fees-feed-container module">
@@ -35,23 +48,23 @@ const EthGasFeesFeed = () => {
             $18.35
           </div>
           <div className="eth-gas-fees-feed-transfer-duration">
-            ~ 6 min, 15s
+            ~ { lowEthGasSpeed } min
           </div>
         </div>
 
         <div className="eth-gas-fees-feed-average">
           <h3>Average</h3>
           <div className="eth-gas-fees-feed-gwei-value">
-            { stdEthGasGwei }
+            { avgEthGasGwei }
           </div>
           <div className="eth-gas-fees-feed-eth-value">
-            Ξ { stdEthGasGwei / 10000000 }
+            Ξ { avgEthGasGwei / 10000000 }
           </div>
           <div className="eth-gas-fees-feed-primary-currency-value">
             $19.99
           </div>
           <div className="eth-gas-fees-feed-transfer-duration">
-            ~ 1 min, 20s
+            ~ { avgEthGasSpeed } min
           </div>
         </div>
 
@@ -67,7 +80,7 @@ const EthGasFeesFeed = () => {
             $22.28
           </div>
           <div className="eth-gas-fees-feed-transfer-duration">
-            ~ 0 min, 20s
+            ~ { highEthGasSpeed } min
           </div>
         </div>
 
