@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/curly/static/css/main.b1fe65d3.chunk.css",
-    "main.js": "/curly/static/js/main.15c98894.chunk.js",
-    "main.js.map": "/curly/static/js/main.15c98894.chunk.js.map",
+    "main.css": "/curly/static/css/main.8cf37e0f.chunk.css",
+    "main.js": "/curly/static/js/main.e7953e34.chunk.js",
+    "main.js.map": "/curly/static/js/main.e7953e34.chunk.js.map",
     "runtime-main.js": "/curly/static/js/runtime-main.09cdccc3.js",
     "runtime-main.js.map": "/curly/static/js/runtime-main.09cdccc3.js.map",
     "static/js/2.90883bc5.chunk.js": "/curly/static/js/2.90883bc5.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.f612cd32.chunk.js": "/curly/static/js/3.f612cd32.chunk.js",
     "static/js/3.f612cd32.chunk.js.map": "/curly/static/js/3.f612cd32.chunk.js.map",
     "index.html": "/curly/index.html",
-    "static/css/main.b1fe65d3.chunk.css.map": "/curly/static/css/main.b1fe65d3.chunk.css.map",
+    "static/css/main.8cf37e0f.chunk.css.map": "/curly/static/css/main.8cf37e0f.chunk.css.map",
     "static/js/2.90883bc5.chunk.js.LICENSE.txt": "/curly/static/js/2.90883bc5.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/curly/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.09cdccc3.js",
     "static/js/2.90883bc5.chunk.js",
-    "static/css/main.b1fe65d3.chunk.css",
-    "static/js/main.15c98894.chunk.js"
+    "static/css/main.8cf37e0f.chunk.css",
+    "static/js/main.e7953e34.chunk.js"
   ]
 }
