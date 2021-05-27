@@ -51,8 +51,8 @@ const WidgetPortfolio = () => {
           </div>
 
           <div className="window-row">
-            <ModuleWallets />
             <ModulePortfolioStats />
+            <ModuleWallets />
           </div>
         </div>
 

@@ -38,7 +38,7 @@ const ModuleCryptoByMarketCap = () => {
         </tr>
 
           { coinsFeed.map((item, i) => (
-          <tr>
+          <tr title={ item.name + ' | Rank: ' + item.market_cap_rank + ' | 24hr Price Change:  ' + item.price_change_percentage_24h + '%' }>
             <td>{ item.name }</td>
             <td>{ item.symbol.toUpperCase() }</td>
             <td>${ numbro(item.current_price).format({thousandSeparated: true}) }</td>

@@ -425,7 +425,10 @@ input[type="checkbox" i] {
 th {
   font-size: var(--font-s);
   text-align: center;
-  padding-bottom: 8px;
+  padding: 3px 0 8px 0;
+  position: sticky;
+  top: 0;
+  background-color: rgb(var(--secondary-window));
 }
 
 td {
@@ -679,6 +682,7 @@ td:nth-of-type(1) {
 
 .portfolio-stats-container {
   width: 200px;
+  min-height: 150px;
   text-align: center;
   display: flex;
   flex-direction: column;
